@@ -337,7 +337,7 @@ static const CGFloat __blurTintColorAlpha = 0.2f;				// defines how much to tint
 	self.targetViewController = parentViewController;
 	
 	UIView *superview = (parentViewController) ? parentViewController.view : fromView.superview;
-	CGRect fromRect = [superview convertRect:fromView.frame toView:nil];
+	CGRect fromRect = [superview convertRect:fromView.frame toView:nil]; // 学到新招
 	
 	[self showImageFromURL:url fromRect:fromRect];
 }
