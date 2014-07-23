@@ -214,6 +214,7 @@ static const CGFloat __blurTintColorAlpha = 0.2f;				// defines how much to tint
 
 - (void)showImage:(UIImage *)image fromRect:(CGRect)fromRect {
 	NSAssert(image, @"Image is required");
+	// NSAssert(NO, @"Image is required");
 
 	[self view]; // make sure view has loaded first
 	_currentOrientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -291,6 +292,7 @@ static const CGFloat __blurTintColorAlpha = 0.2f;				// defines how much to tint
 	}
 	else {
 		// add this view to the main window if no targetViewController was set
+        // 新技能，回去练习
 		if ([UIView instancesRespondToSelector:@selector(setTintAdjustmentMode:)]) {
 			self.keyWindow.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
 			[self.keyWindow tintColorDidChange];
